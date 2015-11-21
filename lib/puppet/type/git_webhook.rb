@@ -19,7 +19,7 @@ module Puppet
       desc 'The URL the webhook will trigger upon a commit to the respective respository. Required. NOTE: GitHub & GitLab only.'
       validate do |value|
         unless value =~ /^(https?:\/\/)?(\S*\:\S*\@)?(\S*)\.?(\S*)\.?(\w*):?(\d*)\/?(\S*)$/
-          raise(Puppet::Error, "Git webhook URL must be fully qualified, not '#{value}'")
+          #raise(Puppet::Error, "Git webhook URL must be fully qualified, not '#{value}'")
         end
       end
     end
